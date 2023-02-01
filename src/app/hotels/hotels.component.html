@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productlist" >
+      <div class="card col-md-3  " routerLink="/details/{{item.id}}">
+
+        <img src="{{ item.image }}" alt="" />
+
+        
+        <div class="card-body">
+          <!-- <a routerLink="/details/{{item.id}}"> -->
+
+          <h1 class="card-title">{{ item.title }}</h1>
+
+          <!-- </a> -->
+
+
+          <h4 class="card-location">{{ item.location }}</h4>
+          <p class="card-text">
+            {{ item.description }}
+          </p>
+          <p><strong>Price : </strong>${{ item.price }}</p>
+          <h5 class="card-dy">For tonight</h5>
+          <button type="button" class="btn btn-primary">Booking</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

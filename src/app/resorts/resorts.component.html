@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+      <ng-container *ngFor="let item of resortsList">
+        <div class="card col-md-3" >
+  
+          <img src="{{ item.image }}" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">{{ item.title }}</h3>
+            <h5 class="card-location">{{ item.location }}</h5>
+            <p class="card-text">
+              {{ item.description }}
+            </p>
+            <p><strong>Price : </strong>${{ item.price }}</p>
+            <h6 class="card-dy">For tonight</h6>
+            <button type="button" class="btn btn-primary">Booking</button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  
